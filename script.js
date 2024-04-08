@@ -7,7 +7,7 @@ const section = document.querySelector("#section");
 const point = document.querySelector("#point");
 const hpoint = document.querySelector("#highscore-point");
 const button = document.querySelector("#button");
-const game = document.querySelector("#game");
+const res = document.querySelector("#res");
 
 
 const grid = new Grid(gameBoard)
@@ -29,6 +29,7 @@ grid.randomEmptyCell().tile = new Tile(gameBoard);
 function restart(){
     grid.cells.forEach(cell => cell.removeTile())
     point.textContent = `00`;
+    res.textContent = ``;
     grid.randomEmptyCell().tile = new Tile(gameBoard);
     grid.randomEmptyCell().tile = new Tile(gameBoard);
 }
