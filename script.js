@@ -87,6 +87,7 @@ async function handleInput(e) {
     if (!canMoveUp() && !canMoveDown() && !canMoveRight() && !canMoveLeft()) {
         newTile.waitForTransition(true).then(() => {
             result.textContent = "Game Over !!!!";
+            userInput();
 
         });
         return;
